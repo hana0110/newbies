@@ -1,0 +1,182 @@
+¥html {
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+body {
+}
+
+header {
+  width: 100%;
+  }
+
+.heading {
+  width: 100%;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  height: 120px;
+}
+
+.title {
+  font-size: 100px;
+  width: 500px;
+  float: left;
+  padding-left: 20px;
+}
+
+.user_nav {
+  float: right;
+  height: 60px;
+  padding-top: 55px;
+  padding-right: 20px;
+}
+
+.navbar {
+  height: 92px;
+  width: 100%;
+  background-color: #5E5E5E;
+  margin: 0 auto;
+}
+
+.clearfix:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.content_post {
+  height: auto;
+  margin: 40px;
+  }
+
+.content_post img{
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tags{
+  height: 100px;
+  width: 100%;
+}
+
+
+.tags li{
+  color: #5E5E5E;
+  border: none;
+  width: auto;
+  padding-right: 10px;
+  padding-bottom: 8px;
+  height: 50px;
+  text-align: center;
+  padding-top: 0;
+  font-size: 47px;
+}
+
+.username span{
+  font-size: 45px;
+  color: #999999;
+  font-style: italic;
+  float: right;
+  margin: 25px auto;
+}
+
+.divider{
+  margin-top: 35px;
+  width: 400px;
+  border-bottom: solid 1.5px #999999;
+  margin: 120px auto;
+  margin-bottom: 0;
+}
+
+footer{
+  background-color: #5E5E5E;
+  height: 55px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+footer p{
+  font-size: 25px;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+
+h1,h2,h3,h4,h5,h6,body{
+  color: #5E5E5E;
+  font-size: 45px;
+  font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", serif;
+  font-weight: 100;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #5E5E5E;
+}
+
+.title {
+  margin-top: 5px;
+  margin-left: 7px;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul li{
+  color: #FFFFFF;
+  margin: 0 auto;
+  float: left;
+  width: 19.8%;
+  text-align: center;
+  padding: 20px 0px;
+  border-right: solid 1px #FFFFFF;
+}
+
+.navbar a{
+  color: #FFFFFF;
+}
+
+h2 {
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.container {
+  width: 350px;
+  margin: 15px;
+}
+
+input, textarea {
+  border: solid 1px #999999;
+  float: center;
+}
+
+.headcategory {
+  margin-top: 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-position: center;
+  background-size: 100% auto;
+  border-radius: 3px;
+}
+
+h3 {
+  width: 150px;
+  border-radius: 5px;
+  margin-left: 95px;
+  padding: 3px;
+  text-align: center;
+  font-size: 25px;
+  color: #FFFFFF;
+  font-weight: bold;
+  background: rgba(0,0,0,0.35);
+  text-shadow: 0 1px 0 black;
+}

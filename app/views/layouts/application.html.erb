@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Roomies</title>
+    <meta charset="UTF-8">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <header>
+     <div class="heading">
+      <h1 class="title"><a href="/">Roomies</a></h1>
+      <div class="search">
+      </div>
+        <div class="user_nav">
+        <% if user_signed_in? %>
+        <div class="logged_in">
+          <%= link_to 'My Page', "/mypage", method: :get %>
+          <a class="mypage" href="/mypage">My Page</a>
+        </div>
+        <% else %>
+          <div class="not_logged_in">
+            <%= link_to "Login" %>
+            <%= link_to "Register" %>
+          </div>
+        <% end %>
+        </div>
+      </div>
+
+      <div class="navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/post">Post</a></li>
+          <li><a href="/search">Search</a></li>
+          <li><a href="/categories">Categories</a></li>
+          <li><a href="/mypage">My Page</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="content">
+      <%= yield %>
+    </div>
+
+    <footer>
+      <p>Copyright(C) Roomies ALL RIGHTS RESERVED.</p>
+    </footer>
+  </body>
+
+</html>
