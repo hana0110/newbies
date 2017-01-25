@@ -1,0 +1,21 @@
+  <%= form_for('/designs', method: :post) do |f| %>
+  <div class="field">
+    <%= f.label :image, "Image" %><br>
+    <%= f.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mood_list, "Mood" %><br />
+    <%= text_field_tag 'design[mood_list]', '' %>
+    </div>
+
+  <div class="field">
+    <%= f.label :text, "Details" %><br>
+    <%= f.text_field :text %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+  <% end %>

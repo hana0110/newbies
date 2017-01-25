@@ -1,11 +1,8 @@
 <div class="contents">
   <div class="container">
-  <%= form_tag('/designs', method: :post) do %>
-  <h2>デザイン投稿</h2>
-  <input placeholder="Image URL" type="text" name="image">
-  <input placeholder="tags" type="text" name="tags">
-  <textarea cols="40" rows="10" placeholder="text" name="text"></textarea>
-  <input type="submit" value="POST">
-  <% end %>
+    <h2>デザイン投稿</h2>
+
+    <%= render 'form' %>
+
   </div>
 </div>

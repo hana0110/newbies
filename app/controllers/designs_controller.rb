@@ -8,6 +8,7 @@ class DesignsController < ApplicationController
   end
 
   def search
+    @design.find_related_tag
   end
 
   def categories
@@ -15,6 +16,11 @@ class DesignsController < ApplicationController
 
   def show
     @design = Design.find(params[:id])
+  end
+
+  private
+  def design_params
+    paramas.require(:design).permit(:image, :mood_list, :text)
   end
 
 end
