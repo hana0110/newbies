@@ -4,7 +4,7 @@ class DesignsController < ApplicationController
     @designs = Design.all
   end
 
-  def post
+  def new
   end
 
   def search
