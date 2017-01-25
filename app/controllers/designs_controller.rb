@@ -13,9 +13,6 @@ class DesignsController < ApplicationController
   def categories
   end
 
-  def mypage
-  end
-
   def show
     @design = Design.find(params[:id])
   end

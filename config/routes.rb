@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get 'new' => 'designs#new'
   get 'search' => 'designs#search'
   get 'categories' => 'designs#categories'
-  get 'mypage' => 'designs#mypage'
+  get 'mypage' => 'users#mypage'
 end
