@@ -1,8 +1,10 @@
-<div class="content_post">
+    <div class="content_post">
     <img src="<%= design.images.first.image %>" alt="design">
     <div class="tags">
       <ul>
-          <li>#contemporary</li>
+          <li><%= render 'designs/tag_list', tag_list: design.mood_list %></li>
+          <li><%= render 'designs/tag_list', tag_list: design.color_list %></li>
+          <li><%= render 'designs/tag_list', tag_list: design.roomtype_list %></li>
           <li>#livingroom</li>
           <li>#green</li>
           <li>#blue</li>
@@ -15,4 +17,5 @@
     <span class="username">
       <span>By  <%= design.user.nickname %></span>
     </span>
-</div>
+      <div class="divider"></div>
+  </div>

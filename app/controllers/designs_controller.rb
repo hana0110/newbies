@@ -7,8 +7,13 @@ class DesignsController < ApplicationController
   def new
   end
 
+  def create
+    Design.create(image: design_params[:image], tag: design_params[:tag_list], text: design_params[:text], user_id: current_user.id)
+  end
+
   def search
-    @design.find_related_tag
+    keyword = "%#{params[:keyword]}"
+    @designs = Design.tagged_with([keyword])
   end
 
   def categories
@@ -20,7 +25,7 @@ class DesignsController < ApplicationController
 
   private
   def design_params
-    paramas.require(:design).permit(:image, :mood_list, :text)
+    paramas.require(:design).permit(:design_id, :image, :mood_list, :color_list, :roomtype_list, :text)
   end
 
 end
