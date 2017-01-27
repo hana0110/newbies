@@ -1,14 +1,36 @@
 class DesignsController < ApplicationController
+    before_action :authenticate_user!, only: :new
 
   def index
     @designs = Design.all
   end
 
   def new
+    @design = Design.new
+    @design.images.build
   end
 
   def create
-    Design.create(image: design_params[:image], tag: design_params[:tag_list], text: design_params[:text], user_id: current_user.id)
+    design = Design.new(design_params)
+    design.save
+  end
+
+  def destroy
+    design = Design.find(params[:id])
+    if design.user_id == current_user.id
+      design.destroy
+    end
+  end
+
+  def edit
+    @design = Design.find(params[:id])
+  end
+
+  def update
+    design = Design.find(params[:id])
+    if design.user_id == current_user.id
+      design.update(design_params)
+    end
   end
 
   def search
@@ -20,12 +42,12 @@ class DesignsController < ApplicationController
   end
 
   def show
-    @design = Design.find(params[:id])
+    design = Design.find(params[:design_id])
   end
 
   private
   def design_params
-    paramas.require(:design).permit(:design_id, :image, :mood_list, :color_list, :roomtype_list, :text)
+    params.require(:design).permit(:user_id, :design_id, :mood_list, :color_list, :roomtype_list, :text, images_attributes: [:image, :design_id])
   end
 
 end
