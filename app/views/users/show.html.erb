@@ -1,0 +1,24 @@
+<div class="contents">
+<h2>My Page</h2>
+  <div class="container">
+    <div class="content_list">
+      <div class="favorites">
+        <h2>Favorite Designs</h2>
+          <% @user.designs.each do |design| %>
+            <img src="<%= design.images.first.image %>" alt="design">
+    <span class="username">
+      <span>By  <%= design.user.nickname %></span>
+    </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+<h2>Account Settings</h2>
+<div class="container">
+  <span class="entry_button">
+  <%= link_to 'Sign Out', "/users/sign_out", method: :delete %>
+  </span>
+</div>
+
+</div>

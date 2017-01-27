@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       end
     end
   get 'designs/categories' => 'designs#categories'
-  get 'users/mypage' => 'users#mypage'
+  get 'users/mypage' => 'users#show'
   post 'designs' => 'designs#create'
   root 'designs#index'
   get'designs/:id' => 'designs#show'
