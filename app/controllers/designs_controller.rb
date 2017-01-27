@@ -34,7 +34,7 @@ class DesignsController < ApplicationController
   end
 
   def search
-    keyword = "%#{params[:keyword]}"
+    keyword = "%#{params[:keyword]}%"
     @designs = Design.tagged_with([keyword])
   end
 
@@ -42,7 +42,7 @@ class DesignsController < ApplicationController
   end
 
   def show
-    design = Design.find(params[:design_id])
+    @design = Design.find(params[:id])
   end
 
   private

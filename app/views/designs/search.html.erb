@@ -7,13 +7,16 @@
       <form accept-charset="utf-8" action="/" class="js-search-submit" method="get">
       </form>
   </div>
+
+      <div class="divider"></div>
+
   <div class="container">
     <header class="header-section">
       <h2>Seearch Result</h2>
     </header>
     <ul class="designlist">
       <% @designs.each do |design| %>
-        <div class="content_post">
+      <div class="content_post">
       <a href="designs/<%= design.id %>">
         <img src="<%= design.images.first.image %>" alt="design">
       </a>
@@ -30,5 +33,6 @@
       <div class="divider"></div>
   </div>
   <% end %>
-      </div>
+    </ul>
+    </div>
 </div>

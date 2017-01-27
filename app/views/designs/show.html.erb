@@ -1,21 +1,15 @@
-    <div class="content_post">
-    <img src="<%= design.images.first.image %>" alt="design">
+<div class="contents clearfix">
+   <div class="content_post">
+    <img src="<%= @design.images.first.image %>" alt="design">
     <div class="tags">
       <ul>
-          <li><%= render 'designs/tag_list', tag_list: design.mood_list %></li>
-          <li><%= render 'designs/tag_list', tag_list: design.color_list %></li>
-          <li><%= render 'designs/tag_list', tag_list: design.roomtype_list %></li>
-          <li>#livingroom</li>
-          <li>#green</li>
-          <li>#blue</li>
-          <li>#beige</li>
-          <li>#fireplace</li>
-          <li>#sofa</li>
-          <li>#curtain</li>
+          <li><%= render 'designs/tag_list', tag_list: @design.mood_list %></li>
+          <li><%= render 'designs/tag_list', tag_list: @design.color_list %></li>
+          <li><%= render 'designs/tag_list', tag_list: @design.roomtype_list %></li>
       </ul>
     </div>
     <span class="username">
-      <span>By  <%= design.user.nickname %></span>
+      <span>By  <%= @design.user.nickname %></span>
     </span>
-      <div class="divider"></div>
   </div>
+</div>
