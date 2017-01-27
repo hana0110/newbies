@@ -1,7 +1,9 @@
-  <%= form_for('/designs', method: :post) do |f| %>
+  <%= form_for @design do |f| %>
   <div class="field">
-    <%= f.label :image, "Image" %><br>
-    <%= f.text_field :image %>
+    <%= f.fields_for :images do |image_f| %>
+      <%= image_f.label :image, "Image" %><br>
+      <%= image_f.text_field :image %>
+    <% end %>
   </div>
 
   <div class="field">
@@ -22,6 +24,10 @@
   <div class="field">
     <%= f.label :text, "Details" %><br>
     <%= f.text_field :text %>
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
 
   <div class="actions">
