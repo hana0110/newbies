@@ -1,7 +1,7 @@
 <div class="contents">
   <h2>Design Search</h2>
   <div class="container">
-      <%= form_tag('/desings/search', method: :get) do %>
+      <%= form_tag('/designs/search', method: :get) do %>
       <input class="search_query" name="keyword" placeholder="Keyword Search" type="text" value=""><button class="btn-search" title="Search" type="submit"></button></input>
       <% end %>
       <form accept-charset="utf-8" action="/" class="js-search-submit" method="get">
@@ -12,7 +12,7 @@
 
   <div class="container">
     <header class="header-section">
-      <h2>Seearch Result</h2>
+      <h2>Search Result</h2>
     </header>
     <ul class="designlist">
       <% @designs.each do |design| %>

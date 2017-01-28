@@ -34,8 +34,8 @@ class DesignsController < ApplicationController
   end
 
   def search
-    keyword = "%#{params[:keyword]}%"
-    @designs = Design.tagged_with([keyword])
+    # keyword = "%#{params[:keyword]}%"
+    @designs = Design.tagged_with(params[:keyword])
   end
 
   def categories
