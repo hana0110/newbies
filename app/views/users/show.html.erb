@@ -1,6 +1,27 @@
 <div class="contents">
 <h2>My Page</h2>
   <div class="container">
+
+    <div class="content_list">
+      <div class="my designs">
+        <h2>My Designs</h2>
+          <% @design.each do |design| %>
+            <img src="<%= design.images.first.image %>" alt="design">
+            <div class="more">
+              <span><%= fa_icon "caret-down" %></span>
+              <ul class="more_list">
+                <li>
+                  <%= link_to 'Edit', "/designs/#{design.id}/edit", method: :get %>
+                </li>
+                <li>
+                  <%= link_to 'Delete', "/designs/#{design.id}", method: :delete %>
+                </li>
+              </ul>
+            </div>
+          <% end %>
+      </div>
+    </div>
+
     <div class="content_list">
       <div class="favorites">
         <h2>Favorite Designs</h2>
@@ -9,9 +30,10 @@
     <span class="username">
       <span>By  <%= design.user.nickname %></span>
     </span>
-        <% end %>
+      <% end %>
       </div>
     </div>
+
   </div>
 
 <h2>Account Settings</h2>

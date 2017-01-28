@@ -1,5 +1,5 @@
 class Image < ActiveRecord::Base
-  belongs_to :design
+  belongs_to :design, dependent: :destroy
 
   has_attached_file :image,
       styles:  { medium: "350x250#", thumb: "100x100#" }

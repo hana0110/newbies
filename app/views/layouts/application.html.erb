@@ -17,12 +17,12 @@
         <div class="user_nav">
         <% if user_signed_in? %>
         <div class="logged_in">
-          <%= link_to 'My Page', "/users/mypage", method: :get %>
+          <a class="account" href="/users/myaccount"><%= fa_icon "user-circle", text: "My Account" %></a>
         </div>
         <% else %>
           <div class="not_logged_in">
-            <%= link_to 'Login', "/users/sign_in" %>
-            <%= link_to 'Register', "/users/sign_up" %>
+          <a class="Login" href="/users/sign_in"><%= fa_icon "sign-in", text: "Login" %></a>
+          <a class="Register" href="/users/sign_up"><%= fa_icon "user-plus", text: "Register" %></a>
           </div>
         <% end %>
         </div>

@@ -17,9 +17,10 @@ class DesignsController < ApplicationController
 
   def destroy
     design = Design.find(params[:id])
-    if design.user_id == current_user.id
-      design.destroy
-    end
+    design.mood_list.remove
+    design.color_list.remove
+    design.roomtype_list.remove
+    design.destroy
   end
 
   def edit
