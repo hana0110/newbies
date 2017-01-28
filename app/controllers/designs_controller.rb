@@ -2,7 +2,7 @@ class DesignsController < ApplicationController
     before_action :authenticate_user!, only: :new
 
   def index
-    @designs = Design.all
+    @designs = Design.all.order("created_at DESC")
   end
 
   def new
@@ -35,7 +35,7 @@ class DesignsController < ApplicationController
 
   def search
     # keyword = "%#{params[:keyword]}%"
-    @designs = Design.tagged_with(params[:keyword])
+    @designs = Design.tagged_with(params[:keyword]).order("created_at DESC")
   end
 
   def categories

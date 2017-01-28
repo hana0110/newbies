@@ -14,6 +14,7 @@
     <span class="username">
       <span>By  <%= design.user.nickname %></span>
     </span>
+    <span class="favorite"><%= link_to "Like", add_design_path(design), method: :post %></span>
       <div class="divider"></div>
   </div>
   <% end %>

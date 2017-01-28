@@ -17,7 +17,7 @@
     <ul class="designlist">
       <% @designs.each do |design| %>
       <div class="content_post">
-      <a href="designs/<%= design.id %>">
+      <a href="/designs/<%= design.id %>">
         <img src="<%= design.images.first.image %>" alt="design">
       </a>
       <div class="tags">
@@ -30,6 +30,7 @@
     <span class="username">
       <span>By  <%= design.user.nickname %></span>
     </span>
+        <span class="favorite"><%= link_to "Like", add_design_path(design), method: :post %></span>
       <div class="divider"></div>
   </div>
   <% end %>

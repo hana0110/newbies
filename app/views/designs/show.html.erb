@@ -11,5 +11,10 @@
     <span class="username">
       <span>By  <%= @design.user.nickname %></span>
     </span>
+    <span class="favorite">
+    <% if user_signed_in? %>
+      <%= link_to "Like", add_design_path(@design), method: :post %>
+    <% end %>
+      </span>
   </div>
 </div>

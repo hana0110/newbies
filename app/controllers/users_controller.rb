@@ -4,6 +4,6 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(current_user.id)
-    @favorites = Favorite.where("user_id = ?", @user)
+    @favorites = Favorite.where("user_id = ?", @user).order("created_at DESC")
   end
 end
