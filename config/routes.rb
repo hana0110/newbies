@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   get 'designs/categories' => 'designs#categories'
   get 'users/mypage' => 'users#show'
+  get 'users/settings' => 'users#setting'
   post 'designs' => 'designs#create'
   get'designs/:id' => 'designs#show'
 end
