@@ -1,6 +1,5 @@
 html {
   width: 100%;
-  background-color: #FFFFFF;
 }
 
 body {
@@ -8,6 +7,8 @@ body {
 
 header {
   width: 100%;
+  position: fixed;
+  top: 0px;
   }
 
 .heading {
@@ -15,27 +16,25 @@ header {
   background-color: #FFFFFF;
   margin: 0 auto;
   height: 120px;
-}
 
-.title {
-  font-size: 100px;
-  width: 500px;
-  float: left;
-  padding-left: 20px;
-}
-
-.user_nav {
+  .user_nav {
   float: right;
   height: 60px;
   padding-top: 55px;
   margin-right: 15px;
+  }
+
 }
 
 .navbar {
-  height: 92px;
+  height: 87px;
   width: 100%;
   background-color: #5E5E5E;
   margin: 0 auto;
+}
+
+.content{
+  padding-top: 212px;
 }
 
 .clearfix:after{
@@ -47,13 +46,15 @@ header {
 .content_post {
   height: auto;
   margin: 40px;
-  }
 
-.content_post img{
+    img{
   height: auto;
   width: 100%;
   margin: 0 auto;
+  }
 }
+
+
 
 .tags{
   height: 100px;
@@ -70,7 +71,7 @@ header {
   height: 50px;
   text-align: center;
   padding-top: 0;
-  font-size: 47px;
+  font-size: 40px;
 }
 
 .username span{
@@ -84,8 +85,8 @@ header {
 .divider{
   margin-top: 35px;
   width: 400px;
-  border-bottom: solid 1.5px #999999;
-  margin: 120px auto;
+  border-bottom: solid 1.5px #CCCCCC;
+  margin: 80px auto;
   margin-bottom: 0;
 }
 
@@ -93,11 +94,10 @@ footer{
   background-color: #5E5E5E;
   height: 55px;
   width: 100%;
-  margin-top: 40px;
 }
 
 footer p{
-  font-size: 25px;
+  font-size: 20px;
   color: #FFFFFF;
   text-align: center;
   margin: 0 auto;
@@ -107,8 +107,8 @@ footer p{
 
 h1,h2,h3,h4,h5,h6,body{
   color: #5E5E5E;
-  font-size: 45px;
-  font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", serif;
+  font-size: 40px;
+  font-family: "freight-sans-pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 100;
   margin: 0;
 }
@@ -121,6 +121,11 @@ a {
 .title {
   margin-top: 5px;
   margin-left: 7px;
+  font-size: 100px;
+  width: 500px;
+  float: left;
+  padding-left: 20px;
+  font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
 }
 
 ul{
@@ -133,7 +138,7 @@ ul li{
   color: #FFFFFF;
   margin: 0 auto;
   float: left;
-  width: 19.8%;
+  width: 19.893%;
   text-align: center;
   padding: 20px 0px;
   border-right: solid 1px #FFFFFF;
@@ -147,41 +152,210 @@ h2 {
   font-size: 50px;
   padding: 30px;
   text-align: center;
+  font-weight: 300;
+  font-family: "freight-display-pro", "Georgia", "Cambria", "Times New Roman", "Times", serif;
 }
 
 .container {
   width: 100%;
   margin: 0 auto;
+  padding-bottom: 40px;
 }
 
 input, textarea {
-  border: solid 1px #999999;
+  border: solid 1px #CCCCCC;
   float: center;
 }
 
 .headcategory {
-  margin: 0px 50px 30px;
-  height: 60px;
-  padding: 70px;
+  margin: 15px 50px;
+  height: 100px;
+  padding: 50px;
   background-position: center;
   background-size: 100% auto;
   border-radius: 7px;
+}
+
+.subcategory{
+  height: auto;
+  margin: 0 50px 50px;
+
+  .genre {
+  margin: 1.65%;
+  height: 100px;
+  width: 18%;
+  padding: 6%;
+  background-position: center;
+  background-size: 100% auto;
+  border-radius: 7px;
+  float: left;
+  }
+
 }
 
 h3 {
   width: 300px;
   border-radius: 7px;
   margin: 0 auto;
-  padding: 3px;
+  padding: 20px;
   text-align: center;
   font-size: 50px;
   color: #FFFFFF;
-  font-weight: bold;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.4);
   text-shadow: 0 1px 0 black;
+  font-weight: 300;
 }
 
 .user_nav a {
   margin: 0px 5px;
-  font-size: 40px;
+  font-size: 35px;
 }
+
+.container.form {
+  background-color: #F6F7F9;
+  padding: 50px 0;
+}
+
+.inner_form {
+  background-color: #FFFFFF;
+  border: solid 1px #CCCCCC;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.outer_form {
+  background-color: #FFFFFF;
+  padding: 30px;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.form table{
+  margin: 0 auto;
+}
+
+.actions{
+  text-align: center;
+  width: 100%;
+
+  input, button{
+  margin: 30px 0px 30px;
+  width: 100%;
+  background-color: #5E5E5E;
+  color: #FFFFFF;
+  font-size: 30px;
+  font-weight: 200;
+  padding: 15px 0;
+  border-radius: 5px;
+  }
+}
+
+.form_fields{
+  padding: 0 50px;
+
+  .field{
+    width: 100%;
+    margin: 0 auto;
+
+    label, em {
+    font-size: 20px;
+    font-weight: 200;
+    }
+
+    input, textarea{
+    width: 95%;
+    height: 38px;
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 2.5%;
+    font-weight: 100;
+    }
+
+    textarea {
+      height: auto;
+    }
+  }
+}
+
+.content_list {
+  height: 100%;
+  margin: 0 40px;
+
+  img{
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  }
+  .username span {
+  font-size: 25px;
+  margin: 5px 0px;
+  }
+}
+
+.more{
+  width: 100%;
+  margin: 0 auto;
+.more_list {
+  li {
+  font-size: 25px;
+  padding: 5px;
+  border: 0.7px solid #CCCCCC;
+  border-radius: 5px;
+  width: 40%;
+  margin-left: 10px;
+  }
+  span{
+  color: #5E5E5E;
+  }
+}
+}
+
+.thumbnail{
+  width: 30%;
+  float: left;
+  margin: 10px;
+}
+
+.account_settings{
+  li{
+  width: 100%;
+  padding: 5px;
+  float: none;
+  }
+  span{
+  color: #5E5E5E;
+  }
+}
+
+#user_remember_me {
+  height: 20px;
+  width: 20px;
+  padding: 10px;
+  margin: 20px 5px 0px;
+  float: left;
+}
+
+.more_link_box {
+  font-size: 20px;
+  padding: 0 50px;
+  height: auto;
+  margin-bottom: 30px;
+
+  a {
+    float: left;
+    padding-bottom: 10px;
+  }
+
+  p {
+    font-size: 23px;
+    margin: 15px 0 0;
+    font-weight: 300;
+  }
+
+  i{
+    padding: 3px 7px;
+    float: left;
+  }
+  }
+
