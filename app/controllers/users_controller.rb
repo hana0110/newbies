@@ -7,4 +7,10 @@ class UsersController < ApplicationController
     @favorites = Favorite.where("user_id = ?", @user).order("created_at DESC")
     @design = Design.where("user_id = ?", @user).order("created_at DESC")
   end
+
+  def setting
+  end
+
+  def edit
+  end
 end
