@@ -1,37 +1,42 @@
+<div class="inner_form">
+    <h2>Share Your Design</h2>
   <%= form_for @design do |f| %>
-  <div class="field">
+  <div class="form_fields">
+    <div class="field">
     <%= f.fields_for :images do |image_f| %>
-      <%= image_f.label :image, "Image" %><br>
+      <%= image_f.label :image, "Image" %>
       <%= image_f.file_field :image %>
     <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :mood_list, "Mood" %><br />
-    <%= text_field_tag 'design[mood_list]', '' %>
     </div>
 
-  <div class="field">
-    <%= f.label :color_list, "Color" %><br />
-    <%= text_field_tag 'design[color_list]', '' %>
+    <div class="field">
+      <%= f.label :mood_list, "Mood" %>
+      <%= text_field_tag 'design[mood_list]', '', placeholder: "natural, modern, japanese" %>
     </div>
 
-  <div class="field">
-    <%= f.label :roomtype_list, "Room Type" %><br />
-    <%= text_field_tag 'design[roomtype_list]', '' %>
+    <div class="field">
+      <%= f.label :color_list, "Color" %>
+      <%= text_field_tag 'design[color_list]', '', placeholder: "blue, beige, gold" %>
     </div>
 
-  <div class="field">
-    <%= f.label :text, "Details" %><br>
-    <%= f.text_field :text %>
-  </div>
+    <div class="field">
+      <%= f.label :roomtype_list, "Room Type" %>
+      <%= text_field_tag 'design[roomtype_list]', '', placeholder: "livingroom, kidsroom, roof" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :text, "Details" %>
+      <%= f.text_area :text, rows: "10", placeholder: "Instead of hanging a painting on a bare wall, accent it with a rich, velvet curtain background..." %>
+    </div>
 
   <div class="field">
     <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Post" %>
   </div>
 
   <% end %>
+
+</div>

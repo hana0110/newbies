@@ -1,19 +1,28 @@
 <div class="contents">
+<div class="container form">
+  <div class="outer_form">
+  <div class="inner_form">
   <h2>Design Search</h2>
-  <div class="container">
+    <div class="form_fields">
+    <div class="field">
       <%= form_tag('/designs/search', method: :get) do %>
-      <input class="search_query" name="keyword" placeholder="Keyword Search" type="text" value=""><button class="btn-search" title="Search" type="submit"></button></input>
+      <input id="search_query" name="keyword" placeholder="natural, beige" type="text" value=""></input>
+      <div class="actions">
+      <button class="btn-search" title="Search" type="search">Search</button>
+      </div>
       <% end %>
       <form accept-charset="utf-8" action="/" class="js-search-submit" method="get">
       </form>
+    </div>
+    </div>
+  </div>
+  </div>
   </div>
 
-      <div class="divider"></div>
-
   <div class="container">
-    <header class="header-section">
-      <h2>Search Result</h2>
-    </header>
+    <div class="header-section">
+      <h2>Search Results</h2>
+    </div>
     <ul class="designlist">
       <% @designs.each do |design| %>
       <div class="content_post">

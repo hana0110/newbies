@@ -1,11 +1,15 @@
 <div class="contents">
+<div class="container form">
+  <div class="outer_form">
+  <div class="inner_form">
 <h2>Register</h2>
 
+<div class="form_fields">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :Designer_Name%><em>(10 characters maximum)</em><br />
+    <%= f.label :Designer_Name%><em> (10 characters maximum)</em><br />
     <%= f.text_field :nickname, autofocus: true, maxlangth: "30" %>
   </div>
 
@@ -31,10 +35,15 @@
     <%= f.submit "Sign up" %>
   </div>
 
+</div>
+
   <div class="more_link_box">
-  <strong>Have an account?</strong>
+  <p>Have an account?</p>
   <%= render "devise/shared/links" %>
   </div>
 <% end %>
 
+</div>
+</div>
+</div>
 </div>

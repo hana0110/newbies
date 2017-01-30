@@ -17,12 +17,12 @@
         <div class="user_nav">
         <% if user_signed_in? %>
         <div class="logged_in">
-          <a class="account" href="/users/myaccount"><%= fa_icon "user-circle", text: "My Account" %></a>
+          <a class="account" href="/users/settings"><%= fa_icon "cog", text: "Account" %></a>
         </div>
         <% else %>
           <div class="not_logged_in">
           <a class="Login" href="/users/sign_in"><%= fa_icon "sign-in", text: "Login" %></a>
-          <a class="Register" href="/users/sign_up"><%= fa_icon "user-plus", text: "Register" %></a>
+          <a class="Signup" href="/users/sign_up"><%= fa_icon "user-plus", text: "Sign up" %></a>
           </div>
         <% end %>
         </div>
@@ -31,7 +31,7 @@
       <div class="navbar">
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/designs/new">Post</a></li>
+          <li><a href="/designs/new">Share</a></li>
           <li><a href="/designs/search">Search</a></li>
           <li><a href="/designs/categories">Categories</a></li>
           <li><a href="/users/mypage">My Page</a></li>
