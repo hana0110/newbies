@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :favorites, only: [:destroy]
 
-  get 'designs/styles' => 'designs#style'
+  get 'designs/browse' => 'designs#browse'
   get 'users/mypage' => 'users#show'
   get 'users/settings' => 'users#setting'
   post 'designs' => 'designs#create'
