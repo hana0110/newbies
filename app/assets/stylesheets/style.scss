@@ -177,23 +177,43 @@ input, textarea {
 }
 
 .headcategory {
-  margin: 15px 50px;
-  height: 100px;
-  padding: 50px;
-  background-position: center;
-  background-size: 100% auto;
+  height: 70px;
+  margin: 30px 50px;
+  border: 1px solid #CCCCCC;
   border-radius: 7px;
+
+  h3 {
+  float: left;
+  width: 80%;
+  padding: 10px 0 10px 10%;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 200;
+  color: #41858c;
+}
+
+  i{
+    float: right;
+    width: 10%;
+    text-align: center;
+    padding: 10px 0 0;
+    font-size: 60px;
+    font-weight: 100;
+    color: #CCCCCC;
+  }
 }
 
 .subcategory{
   height: auto;
   margin: 0 50px;
+  li{
+    padding: 0;
+  }
 
   .genre {
   margin: 1.65%;
-  height: 100px;
-  width: 18%;
-  padding: 5.9%;
+  height: 210px;
+  width: 260px;
   background-position: center;
   background-size: 100% auto;
   border-radius: 7px;
@@ -201,23 +221,18 @@ input, textarea {
 
   h4 {
   text-align: center;
-  padding: 25px 0;
+  height: 40px;
+  padding: 85px 0;
+  border-radius: 7px;
+  margin: 0 auto;
+  text-align: center;
+  color: #FFFFFF;
+  background: rgba(0,0,0,0.2);
+  text-shadow: 0 1px 0 black;
+  font-weight: 300;
 }
   }
 
-}
-
-h3 {
-  width: 300px;
-  border-radius: 7px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-  font-size: 50px;
-  color: #FFFFFF;
-  background: rgba(0,0,0,0.4);
-  text-shadow: 0 1px 0 black;
-  font-weight: 300;
 }
 
 .user_nav a {
