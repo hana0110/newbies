@@ -19,30 +19,8 @@
   </div>
   </div>
 
-  <div class="container">
-    <div class="header-section">
-      <h2>Search Results</h2>
-    </div>
-    <ul class="designlist">
-      <% @designs.each do |design| %>
-      <div class="content_post">
-      <a href="/designs/<%= design.id %>">
-        <img src="<%= design.images.first.image %>" alt="design">
-      </a>
-      <div class="tags">
-        <ul>
-            <li><%= render 'designs/tag_list', tag_list: design.mood_list %></li>
-            <li><%= render 'designs/tag_list', tag_list: design.color_list %></li>
-            <li><%= render 'designs/tag_list', tag_list: design.roomtype_list %></li>
-      </ul>
-    </div>
-    <span class="username">
-      <span>By  <%= design.user.nickname %></span>
-    </span>
-        <span class="favorite"><%= link_to "Like", add_design_path(design), method: :post %></span>
-      <div class="divider"></div>
-  </div>
-  <% end %>
-    </ul>
-    </div>
+<% unless params[:keyword] == nil then %>
+<div class="container">
+  <%= render 'results' %>
 </div>
+<% end %>
