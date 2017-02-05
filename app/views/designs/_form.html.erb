@@ -1,5 +1,3 @@
-<div class="inner_form">
-    <h2>Share Your Design</h2>
   <%= form_for @design do |f| %>
   <div class="form_fields">
     <div class="field">
@@ -11,17 +9,17 @@
 
     <div class="field">
       <%= f.label :mood_list, "Mood" %>
-      <%= text_field_tag 'design[mood_list]', '', placeholder: "natural, modern, japanese" %>
+      <%= text_field_tag 'design[mood_list]', @design.mood_list, placeholder: "natural, modern, japanese" %>
     </div>
 
     <div class="field">
       <%= f.label :color_list, "Color" %>
-      <%= text_field_tag 'design[color_list]', '', placeholder: "blue, beige, gold" %>
+      <%= text_field_tag 'design[color_list]', @design.color_list, placeholder: "blue, beige, gold" %>
     </div>
 
     <div class="field">
       <%= f.label :roomtype_list, "Room Type" %>
-      <%= text_field_tag 'design[roomtype_list]', '', placeholder: "livingroom, kidsroom, roof" %>
+      <%= text_field_tag 'design[roomtype_list]', @design.roomtype_list, placeholder: "livingroom, kidsroom, roof" %>
     </div>
 
     <div class="field">
@@ -38,5 +36,3 @@
   </div>
 
   <% end %>
-
-</div>
