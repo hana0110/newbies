@@ -39,7 +39,7 @@ class DesignsController < ApplicationController
     @designs = Design.tagged_with(params[:keyword]).order("created_at DESC")
   end
 
-  def categories
+  def style
   end
 
   def show

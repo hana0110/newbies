@@ -34,7 +34,7 @@ header {
 }
 
 .content{
-  padding-top: 212px;
+  padding-top: 207px;
 }
 
 .clearfix:after{
@@ -48,9 +48,15 @@ header {
   margin: 40px;
 
     img{
-  height: auto;
+  height: 650px;
   width: 100%;
   margin: 0 auto;
+  }
+
+  .details {
+    width: 100%;
+    float: left;
+    margin-bottom: 40px;
   }
 }
 
@@ -59,6 +65,7 @@ header {
 .tags{
   height: 100px;
   width: 100%;
+  padding-bottom: 20px;
 }
 
 
@@ -75,11 +82,13 @@ header {
 }
 
 .username span{
-  font-size: 45px;
+  font-size: 40px;
   color: #999999;
   font-style: italic;
+  text-align: right;
   float: right;
   margin: 25px auto;
+  width: 100%;
 }
 
 .divider{
@@ -178,17 +187,22 @@ input, textarea {
 
 .subcategory{
   height: auto;
-  margin: 0 50px 50px;
+  margin: 0 50px;
 
   .genre {
   margin: 1.65%;
   height: 100px;
   width: 18%;
-  padding: 6%;
+  padding: 5.9%;
   background-position: center;
   background-size: 100% auto;
   border-radius: 7px;
   float: left;
+
+  h4 {
+  text-align: center;
+  padding: 25px 0;
+}
   }
 
 }
@@ -282,10 +296,16 @@ h3 {
   height: 100%;
   margin: 0 40px;
 
+  .thumbnail{
+  width: 30%;
+  float: left;
+  margin: 1.6%;
+}
+
   img{
-  height: auto;
   width: 100%;
   margin: 0 auto;
+  height: 200px;
   }
   .username span {
   font-size: 25px;
@@ -296,25 +316,20 @@ h3 {
 .more{
   width: 100%;
   margin: 0 auto;
+
 .more_list {
   li {
   font-size: 25px;
   padding: 5px;
   border: 0.7px solid #CCCCCC;
   border-radius: 5px;
-  width: 40%;
-  margin-left: 10px;
+  width: 41%;
+  margin: 2.2%;
   }
   span{
   color: #5E5E5E;
   }
 }
-}
-
-.thumbnail{
-  width: 30%;
-  float: left;
-  margin: 10px;
 }
 
 .account_settings{
@@ -358,4 +373,34 @@ h3 {
     float: left;
   }
   }
+
+.wrapper {
+  height: auto;
+  background-size: 100%;
+
+  h2{
+  background: rgba(0,0,0,0.15);
+  color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  font-size: 80px;
+  padding: 20% 0;
+  font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+  }
+}
+
+.favorite {
+    margin: 25px 0;
+    float: left;
+    width: 400px;
+    font-size: 30px;
+}
+
+.success {
+  .nav{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  }
+}
 
