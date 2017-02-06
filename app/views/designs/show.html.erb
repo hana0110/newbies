@@ -9,6 +9,7 @@
       </ul>
     </div>
 
+  <div class="content_info">
     <span class="favorite clearfix">
     <% if user_signed_in? %>
     <span><%= fa_icon "plus-square-o" %></span>
@@ -17,8 +18,10 @@
       </span>
 
     <span class="username clearfix">
-      <span>By  <%= @design.user.nickname %></span>
+      <span>By <%= @design.user.nickname %></span>
     </span>
+
+  </div>
 
 
     <div class="details">

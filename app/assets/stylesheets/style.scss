@@ -46,6 +46,7 @@ header {
 .content_post {
   height: auto;
   margin: 40px;
+  box-shadow: 1px 2px 3px 0 rgba(0,0,0,0.3);
 
     img{
   height: 650px;
@@ -55,8 +56,12 @@ header {
 
   .details {
     width: 100%;
-    float: left;
     margin-bottom: 40px;
+    p {
+      margin: 40px 0;
+      font-size: 35px;
+      padding: 0 20px 40px;
+    }
   }
 }
 
@@ -65,7 +70,7 @@ header {
 .tags{
   height: 100px;
   width: 100%;
-  padding-bottom: 20px;
+  padding: 0 10px 20px;
 }
 
 
@@ -82,21 +87,26 @@ header {
 }
 
 .username span{
-  font-size: 40px;
+  font-size: 35px;
   color: #999999;
   font-style: italic;
   text-align: right;
   float: right;
   margin: 25px auto;
-  width: 100%;
+  padding-right: 20px;
+  width: 45%;
+}
+
+.content_info {
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+  margin: 30px 0;
 }
 
 .divider{
-  margin-top: 35px;
   width: 400px;
   border-bottom: solid 1.5px #CCCCCC;
-  margin: 80px auto;
-  margin-bottom: 0;
+  margin: 40px auto 0;
 }
 
 footer{
@@ -117,7 +127,7 @@ footer p{
 h1,h2,h3,h4,h5,h6,body{
   color: #5E5E5E;
   font-size: 40px;
-  font-family: "freight-sans-pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "freight-sans-pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   font-weight: 100;
   margin: 0;
 }
@@ -178,7 +188,7 @@ input, textarea {
 
 .headcategory {
   height: 70px;
-  margin: 30px 50px;
+  margin: 40px 50px;
   border: 1px solid #CCCCCC;
   border-radius: 7px;
 
@@ -335,7 +345,7 @@ input, textarea {
 .more_list {
   li {
   font-size: 25px;
-  padding: 5px;
+  padding: 10px 5px;
   border: 0.7px solid #CCCCCC;
   border-radius: 5px;
   width: 41%;
@@ -405,10 +415,15 @@ input, textarea {
 }
 
 .favorite {
-    margin: 25px 0;
-    float: left;
-    width: 400px;
-    font-size: 30px;
+  margin: 25px 0;
+  padding-left: 20px;
+  float: left;
+  width: 400px;
+  font-size: 35px;
+  color: #2d848a;
+  a{
+    color: #2d848a;
+  }
 }
 
 .success {
@@ -419,3 +434,11 @@ input, textarea {
   }
 }
 
+.favorites span {
+  padding: 0;
+  width: 100%;
+}
+
+.categories {
+  padding: 50px 0;
+}

@@ -16,11 +16,17 @@
           <li><%= render 'designs/tag_list', tag_list: design.roomtype_list %></li>
       </ul>
     </div>
-    <span class="username">
+
+    <span class="favorite">
+    <% if user_signed_in? %>
+    <span><%= fa_icon "plus-square-o" %></span>
+      <%= link_to 'Add to favorites', add_design_path(design), method: :post %>
+    <% end %>
+      </span>
+      <span class="username clearfix">
       <span>By  <%= design.user.nickname %></span>
     </span>
-    <span class="favorite"><%= link_to "Like", add_design_path(design), method: :post %></span>
-      <div class="divider"></div>
+
   </div>
   <% end %>
 </div>
