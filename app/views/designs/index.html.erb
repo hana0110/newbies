@@ -7,7 +7,7 @@
   <% @designs.each do |design| %>
     <div class="content_post">
     <a href="designs/<%= design.id %>">
-    <img src="<%= design.images.first.image(:large) %>" alt="design">
+    <%= image_tag design.images.first.image(:large) %>
     </a>
     <div class="tags">
       <ul>

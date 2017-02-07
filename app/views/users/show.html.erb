@@ -10,7 +10,7 @@
           <% @user.designs.each do |design| %>
             <div class="thumbnail">
             <a href="/designs/<%= design.id %>">
-            <img src="<%= design.images.first.image(:large) %>" alt="design"></a>
+            <%= image_tag design.images.first.image(:large) %></a>
     <span class="username">
       <span>By  <%= design.user.nickname %></span>
     </span>
@@ -34,7 +34,7 @@
           <% @design.each do |design| %>
             <div class="thumbnail">
             <a href="/designs/<%= design.id %>">
-            <img src="<%= design.images.first.image(:large) %>" alt="design"></a>
+              <%= image_tag design.images.first.image(:large) %></a>
             <div class="more">
               <ul class="more_list">
                 <li><span><%= fa_icon "pencil" %></span>
