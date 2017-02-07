@@ -8,7 +8,7 @@
     </div>
     <% if flag %>
       <div class="js-preview preview">
-        <img src="<%= @design.images.first.image(:large) %>" alt="Image Preview">
+        <img src="<%= @design.images.first.image.url(:large) %>" alt="Image Preview">
       </div>
     <% else %>
       <div class="js-preview">
