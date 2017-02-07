@@ -4,8 +4,8 @@
     <ul class="designlist">
       <% @designs.each do |design| %>
     <div class="content_post">
-    <a href="designs/<%= design.id %>">
-    <img src="<%= design.images.first.image %>" alt="design">
+    <a href="/designs/<%= design.id %>">
+    <img src="<%= design.images.first.image(:large) %>" alt="design">
     </a>
     <div class="tags">
       <ul>
