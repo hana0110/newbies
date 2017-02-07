@@ -60,6 +60,7 @@ header {
   width: 100%;
   position: fixed;
   top: 0px;
+  z-index: 9999;
   }
 
 .heading {
@@ -389,6 +390,8 @@ input, textarea {
   .username span {
   font-size: 25px;
   margin: 5px 0px;
+  padding: 0;
+  width: auto;
   }
 }
 
@@ -495,4 +498,20 @@ input, textarea {
 
 .categories {
   padding: 50px 0;
+}
+
+.preview{
+  width: 450px;
+  height: 325px;
+  overflow: hidden;
+  position: relative;
+  margin: 20px auto;
+  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+  }
 }
