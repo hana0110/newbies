@@ -1,0 +1,4 @@
+    bucket: ENV.fetch('newbies-test'),
+    access_key_id: ENV.fetch('AKIAI2XNRVBND6O4XUQA'),
+    secret_access_key: ENV.fetch('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'),
+    s3_region: ENV.fetch('us-east-1')
