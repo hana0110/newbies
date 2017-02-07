@@ -50,3 +50,7 @@ gem 'devise'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'paperclip'
 gem 'font-awesome-rails'
+
+group :production, :staging do
+  gem 'rails_12factor'
+end
