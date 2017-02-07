@@ -1,6 +1,6 @@
 <div class="contents clearfix">
    <div class="content_post">
-    <img src="<%= @design.images.first.image %>" alt="design">
+    <img src="<%= @design.images.first.image(:large) %>" alt="design">
     <div class="tags clearfix">
       <ul>
           <li><%= render 'designs/tag_list', tag_list: @design.mood_list %></li>
