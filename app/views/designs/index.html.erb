@@ -6,10 +6,10 @@
   <div class="homecontents_1">
   <% @designs.each do |design| %>
     <div class="content_post">
-    <a href="designs/<%= design.id %>">
+    <a href="/designs/<%= design.id %>">
     <%= image_tag design.images.first.image.url(:large) %>
     </a>
-    <div class="tags">
+    <div class="tags clearfix">
       <ul>
           <li><%= render 'designs/tag_list', tag_list: design.mood_list %></li>
           <li><%= render 'designs/tag_list', tag_list: design.color_list %></li>
@@ -17,15 +17,28 @@
       </ul>
     </div>
 
-    <span class="favorite">
-    <% if user_signed_in? %>
-    <span><%= fa_icon "plus-square-o" %></span>
-      <%= link_to 'Add to favorites', add_design_path(design), method: :post %>
-    <% end %>
-      </span>
       <span class="username clearfix">
       <span>By  <%= design.user.nickname %></span>
     </span>
+
+  <div class="more">
+      <ul class="more_list clearfix">
+        <% if user_signed_in? && design.user.id != current_user.id %>
+            <li><span><%= fa_icon "plus-square-o" %></span>
+              <%= link_to 'Favorite', add_design_path(design), method: :post %>
+              </li>
+            <% end %>
+    <% if user_signed_in? && design.user.id == current_user.id %>
+            <li><span><%= fa_icon "pencil" %></span>
+              <%= link_to 'Edit', "/designs/#{design.id}/edit", method: :get %>
+            </li>
+            <li><span><%= fa_icon "trash" %></span>
+              <%= link_to 'Delete', "/designs/#{design.id}", method: :delete %>
+            </li>
+          </ul>
+    <% end %>
+      </div>
+
 
   </div>
   <% end %>

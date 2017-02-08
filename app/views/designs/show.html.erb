@@ -1,5 +1,6 @@
 <div class="contents clearfix">
    <div class="content_post">
+     <div class="content_info">
     <%= image_tag @design.images.first.image(:large) %>
     <div class="tags clearfix">
       <ul>
@@ -8,24 +9,40 @@
           <li><%= render 'designs/tag_list', tag_list: @design.roomtype_list %></li>
       </ul>
     </div>
-
-  <div class="content_info">
-    <span class="favorite clearfix">
-    <% if user_signed_in? %>
-    <span><%= fa_icon "plus-square-o" %></span>
-      <%= link_to 'Add to favorites', add_design_path(@design), method: :post %>
-    <% end %>
-      </span>
-
-    <span class="username clearfix">
+        <span class="username clearfix">
       <span>By <%= @design.user.nickname %></span>
     </span>
+    </div>
 
-  </div>
-
+  <div class="more">
+      <ul class="more_list clearfix">
+    <% if user_signed_in? && @design.user.id != current_user.id %>
+            <li><span><%= fa_icon "plus-square-o" %></span>
+              <%= link_to 'Favorite', add_design_path(@design), method: :post %>
+            </li>
+            <% end %>
+    <% if user_signed_in? && @design.user.id == current_user.id %>
+            <li><span><%= fa_icon "pencil" %></span>
+              <%= link_to 'Edit', "/designs/#{@design.id}/edit", method: :get %>
+            </li>
+            <li><span><%= fa_icon "trash" %></span>
+              <%= link_to 'Delete', "/designs/#{@design.id}", method: :delete %>
+            </li>
+          </ul>
+    <% end %>
+      </div>
 
     <div class="details">
-      <p><%= @design.text %></span>
+      <div class="info clearfix">
+        <h5>Room Size</h5>
+      </div>
+      <div class="info clearfix">
+        <h5>Key Items</h5>
+      </div>
+      <div class="info clearfix">
+        <h5>Design Tips</h5>
+      <p><%= @design.text %></p>
+      </div>
     </div>
 
   </div>

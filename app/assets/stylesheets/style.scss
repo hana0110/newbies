@@ -105,21 +105,56 @@ header {
   }
 
   .details {
-    width: 100%;
-    margin-bottom: 40px;
-    p {
-      margin: 40px 0;
-      font-size: 35px;
-      padding: 0 20px 40px;
+    width: auto;
+    height: auto;
+    padding: 0 20px 40px;
+    .info{
+      height: auto;
     }
+    p {
+      width: 100%;
+      height: auto;
+      font-size: 30px;
+      float: left;
+      margin: 20px 0;
+    }
+  }
+
+  .more{
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+  margin: 30px 0;
+  width: 100%;
+  height: auto;
+
+    .more_list {
+      height: auto;
+      width: auto;
+
+      li {
+      font-size: 30px;
+      border: none;
+      text-align: left;
+      width: auto;
+      padding: 0;
+      margin: 20px;
+      color: #2d848a;
+      }
+      span{
+      color: #2d848a;
+      }
+      a{
+      color: #2d848a;
+      }
+      }
   }
 }
 
 
 
 .tags{
-  height: 100px;
-  width: 100%;
+  height: auto;
+  width: auto;
   padding: 0 10px 20px;
 }
 
@@ -130,7 +165,6 @@ header {
   width: auto;
   padding-right: 10px;
   padding-bottom: 8px;
-  height: 50px;
   text-align: center;
   padding-top: 0;
   font-size: 40px;
@@ -142,15 +176,9 @@ header {
   font-style: italic;
   text-align: right;
   float: right;
-  margin: 25px auto;
+  margin: 0 auto;
   padding-right: 20px;
   width: 45%;
-}
-
-.content_info {
-  border-top: 1px solid #CCCCCC;
-  border-bottom: 1px solid #CCCCCC;
-  margin: 30px 0;
 }
 
 .divider{
@@ -407,9 +435,13 @@ input, textarea {
   border-radius: 5px;
   width: 41%;
   margin: 2.2%;
+  color: #2d848a;
   }
   span{
-  color: #5E5E5E;
+  color: #2d848a;
+  }
+  a {
+  color: #2d848a;
   }
 }
 }
@@ -471,18 +503,6 @@ input, textarea {
   }
 }
 
-.favorite {
-  margin: 25px 0;
-  padding-left: 20px;
-  float: left;
-  width: 400px;
-  font-size: 35px;
-  color: #2d848a;
-  a{
-    color: #2d848a;
-  }
-}
-
 .success {
   .nav{
   width: 100%;
@@ -514,4 +534,12 @@ input, textarea {
     width: 100%;
     height: auto;
   }
+}
+
+h5 {
+  float: left;
+  height: auto;
+  padding-right: 5px;
+  border-right: 1px solid #CCCCCC;
+  margin-right: 600px;
 }
