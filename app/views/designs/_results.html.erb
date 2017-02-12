@@ -1,31 +1,18 @@
-    <div class="header-section">
+<div class="contents">
+     <div class="header-section">
       <h2>Design List: #<%= params[:keyword]%></h2>
-    </div>
-    <ul class="designlist">
-      <% @designs.each do |design| %>
-    <div class="content_post">
-    <a href="/designs/<%= design.id %>">
-    <%= image_tag design.images.first.image(:large) %>
-    </a>
-    <div class="tags">
-      <ul>
-          <li><%= render 'designs/tag_list', tag_list: design.mood_list %></li>
-          <li><%= render 'designs/tag_list', tag_list: design.color_list %></li>
-          <li><%= render 'designs/tag_list', tag_list: design.roomtype_list %></li>
-      </ul>
-    </div>
-
-    <span class="favorite">
-    <% if user_signed_in? %>
-    <span><%= fa_icon "plus-square-o" %></span>
-      <%= link_to 'Add to favorites', add_design_path(design), method: :post %>
-    <% end %>
-      </span>
-      <span class="username clearfix">
+      </div>
+    <div class="content_list clearfix">
+          <% @designs.each do |design| %>
+            <div class="thumbnail">
+            <a href="/designs/<%= design.id %>">
+            <%= image_tag design.images.first.image.url(:large) %></a>
+    <span class="username">
       <span>By  <%= design.user.nickname %></span>
     </span>
+      </div>
+      <% end %>
+      </div>
+</div>
 
-  </div>
-  <% end %>
-    </ul>
-    </div>
+

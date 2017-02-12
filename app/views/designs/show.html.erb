@@ -6,10 +6,9 @@
       <ul>
           <li><%= render 'designs/tag_list', tag_list: @design.mood_list %></li>
           <li><%= render 'designs/tag_list', tag_list: @design.color_list %></li>
-          <li><%= render 'designs/tag_list', tag_list: @design.roomtype_list %></li>
       </ul>
     </div>
-        <span class="username clearfix">
+    <span class="username clearfix">
       <span>By <%= @design.user.nickname %></span>
     </span>
     </div>
@@ -34,13 +33,11 @@
 
     <div class="details">
       <div class="info clearfix">
-        <h5>Room Size</h5>
+        <h5>Key Items |</h5>
+        <li><%= render 'designs/tag_list', tag_list: @design.item_list %></li>
       </div>
       <div class="info clearfix">
-        <h5>Key Items</h5>
-      </div>
-      <div class="info clearfix">
-        <h5>Design Tips</h5>
+        <h5>Design Tips |</h5>
       <p><%= @design.text %></p>
       </div>
     </div>

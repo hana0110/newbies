@@ -114,9 +114,13 @@ header {
     p {
       width: 100%;
       height: auto;
-      font-size: 30px;
+      font-size: 35px;
       float: left;
-      margin: 20px 0;
+    }
+    li {
+      list-style: none;
+      font-size: 35px;
+      margin-bottom: 40px;
     }
   }
 
@@ -302,7 +306,7 @@ input, textarea {
   height: 210px;
   width: 30.2%;
   background-position: center;
-  background-size: 100% auto;
+  background-size: cover;
   border-radius: 7px;
   float: left;
 
@@ -314,7 +318,7 @@ input, textarea {
   margin: 0 auto;
   text-align: center;
   color: #FFFFFF;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.3);
   text-shadow: 0 1px 0 black;
   font-weight: 300;
 }
@@ -403,7 +407,7 @@ input, textarea {
 
 .content_list {
   height: 100%;
-  margin: 0 40px;
+  margin: 40px 40px;
 
   .thumbnail{
   width: 30%;
@@ -540,6 +544,7 @@ h5 {
   float: left;
   height: auto;
   padding-right: 5px;
-  border-right: 1px solid #CCCCCC;
-  margin-right: 600px;
+  width: 100%;
+  margin-bottom: 20px;
+  font-weight: 200;
 }
