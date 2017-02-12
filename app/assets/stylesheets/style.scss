@@ -113,8 +113,9 @@ header {
     }
     p {
       width: 100%;
+      line-height: 1.3;
       height: auto;
-      font-size: 35px;
+      font-size: 30px;
       float: left;
     }
     li {
@@ -546,4 +547,8 @@ h5 {
   width: 100%;
   margin-bottom: 20px;
   font-weight: 200;
+}
+
+br {
+  line-height: 2;
 }
