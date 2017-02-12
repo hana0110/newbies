@@ -35,16 +35,6 @@
             <div class="thumbnail">
             <a href="/designs/<%= design.id %>">
               <%= image_tag design.images.first.image(:large) %></a>
-            <div class="more">
-              <ul class="more_list">
-                <li><span><%= fa_icon "pencil" %></span>
-                  <%= link_to 'Edit', "/designs/#{design.id}/edit", method: :get %>
-                </li>
-                <li><span><%= fa_icon "trash" %></span>
-                  <%= link_to 'Delete', "/designs/#{design.id}", method: :delete %>
-                </li>
-              </ul>
-            </div>
           </div>
           <% end %>
       </div>
