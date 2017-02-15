@@ -43,7 +43,9 @@ class DesignsController < ApplicationController
   end
 
   def show
+    @user_id = current_user.id
     @design = Design.find(params[:id])
+    @favorite = Favorite.where("user_id = ? and design_id = ?", @user_id, @design.id )
   end
 
   private

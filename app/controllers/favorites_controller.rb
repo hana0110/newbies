@@ -11,9 +11,11 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-    @favorite = Favorite.find(params[:id])
+    @user_id = current_user.id
+    @design = Design.find(params[:id])
+    @favorite = Favorite.find_by user_id: @user_id, design_id: params[:id]
     if @favorite.destroy
-      redirect_to "/users/mypage"
+      redirect_to "/"
     end
   end
 

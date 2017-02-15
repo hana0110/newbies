@@ -1,4 +1,4 @@
 class Favorite < ActiveRecord::Base
   belongs_to :user
-  belongs_to :design, dependent: :destroy
+  belongs_to :design
 end
