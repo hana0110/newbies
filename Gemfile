@@ -56,3 +56,6 @@ group :production, :staging do
 end
 
 gem 'aws-sdk'
+
+gem 'kaminari'
+gem 'jquery-turbolinks'

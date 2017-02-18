@@ -2,7 +2,7 @@ class DesignsController < ApplicationController
     before_action :authenticate_user!, only: :new
 
   def index
-    @designs = Design.all.order("created_at DESC")
+    @designs = Design.page(params[:page]).per(5).order("created_at DESC")
   end
 
   def new
@@ -45,7 +45,7 @@ class DesignsController < ApplicationController
   def show
     @user_id = current_user.id
     @design = Design.find(params[:id])
-    @favorite = Favorite.where("user_id = ? and design_id = ?", @user_id, @design.id )
+    @favorite = Favorite.where("user_id = ? and design_id = ?", @current_user.id, @design.id )
   end
 
   private
