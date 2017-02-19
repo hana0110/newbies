@@ -40,9 +40,6 @@
               <%= link_to '削除', "/designs/#{@design.id}", method: :delete %>
             </li>
     <% end %>
-            <li id="pin">
-            <a data-pin-do="buttonPin" data-pin-tall="true" data-pin-lang="en" data-pin-save="true" href="https://www.pinterest.com/pin/create/button/?url=<% @design.images.first.image.url(:large) %>&media=&description=homedecor"></a>
-            </li>
         </ul>
       </div>
 
