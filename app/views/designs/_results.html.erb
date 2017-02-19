@@ -1,6 +1,6 @@
 <div class="contents">
      <div class="header-section">
-      <h2>Design List: #<%= params[:keyword]%></h2>
+      <h2>Design List: <%= params[:keyword]%></h2>
       </div>
     <div class="content_list clearfix">
           <% @designs.each do |design| %>
@@ -15,4 +15,4 @@
       </div>
 </div>
 
-<% provide :title, " | ##{params[:keyword]} デザイン検索" %>
+<% provide :title, " | #{params[:keyword]} デザイン検索" %>

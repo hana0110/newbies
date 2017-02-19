@@ -17,22 +17,22 @@
 
     <div class="field">
       <%= f.label :style_list, "Styles" %>
-      <%= text_field_tag 'design[style_list]', @design.style_list, placeholder: "natural, modern, japanese" %>
+      <%= text_field_tag 'design[style_list]', @design.style_list, placeholder: "natural, modernなどデザインのスタイル" %>
     </div>
 
     <div class="field">
       <%= f.label :color_list, "Colors" %>
-      <%= text_field_tag 'design[color_list]', @design.color_list, placeholder: "blue, beige, gold" %>
+      <%= text_field_tag 'design[color_list]', @design.color_list, placeholder: "blue, beigeなどデザインのベース・アクセントカラー" %>
     </div>
 
     <div class="field">
       <%= f.label :item_list, "Key Items" %>
-      <%= text_field_tag 'design[item_list]', @design.item_list, placeholder: "sofa, bed, shelf" %>
+      <%= text_field_tag 'design[item_list]', @design.item_list, placeholder: "sofa, bedなどキーアイテム" %>
     </div>
 
     <div class="field">
       <%= f.label :text, "Design Tips" %>
-      <%= f.text_area :text, rows: "10", placeholder: "Instead of hanging a painting on a bare wall, accent it with a rich, velvet curtain background..." %>
+      <%= f.text_area :text, rows: "10", placeholder: "レイアウトやカラーコーディネートなどデザインのこだわりポイント（例：背の低い家具で揃えることで空間を広く見せることができ、照明やポスターなど天井高を活用したコーディネートができます。）" %>
     </div>
 
   <div class="field">
