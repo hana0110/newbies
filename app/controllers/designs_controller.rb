@@ -17,9 +17,9 @@ class DesignsController < ApplicationController
 
   def destroy
     design = Design.find(params[:id])
-    design.mood_list.remove
+    design.style_list.remove
     design.color_list.remove
-    design.roomtype_list.remove
+    design.item_list.remove
     design.destroy
   end
 
@@ -43,14 +43,12 @@ class DesignsController < ApplicationController
   end
 
   def show
-    @user_id = current_user.id
     @design = Design.find(params[:id])
-    @favorite = Favorite.where("user_id = ? and design_id = ?", @user_id, @design.id )
   end
 
   private
   def design_params
-    params.require(:design).permit(:user_id, :design_id, :mood_list, :color_list, :roomtype_list, :text, images_attributes: [:image, :design_id])
+    params.require(:design).permit(:user_id, :design_id, :style_list, :color_list, :item_list, :text, images_attributes: [:image, :design_id])
   end
 
 end

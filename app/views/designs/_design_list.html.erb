@@ -6,7 +6,7 @@
     </a>
     <div class="tags clearfix">
       <ul>
-          <li><%= render 'designs/tag_list', tag_list: design.mood_list %></li>
+          <li><%= render 'designs/tag_list', tag_list: design.style_list %></li>
           <li><%= render 'designs/tag_list', tag_list: design.color_list %></li>
           <li><%= render 'designs/tag_list', tag_list: design.item_list %></li>
       </ul>
@@ -21,29 +21,29 @@
         <% if user_signed_in? && design.user.id != current_user.id %>
           <% if Favorite.where("user_id = ? and design_id = ?", current_user.id, design.id).exists? == false %>
             <li><span><%= fa_icon "plus-square-o" %></span>
-              <%= link_to 'Add to Favorites', add_design_path(design), method: :post %>
+              <%= link_to 'お気に入り追加', add_design_path(design), method: :post %>
               </li>
           <% end %>
           <% if Favorite.where("user_id = ? and design_id = ?", current_user.id, design.id).exists? == true %>
             <li><span><%= fa_icon "minus-square-o" %></span>
-              <%= link_to 'Remove from Favorites', favorite_path(design), method: :delete %>
+              <%= link_to 'お気に入り解除', favorite_path(design), method: :delete %>
               </li>
           <% end %>
         <% end %>
         <% unless user_signed_in? %>
-          <li><a href="/users/sign_in"><span><%= fa_icon "plus-square-o", text: 'Add to Favorites' %></span></a>
+          <li><a href="/users/sign_in"><span><%= fa_icon "plus-square-o", text: 'お気に入り追加' %></span></a>
               </li>
         <% end %>
     <% if user_signed_in? && design.user.id == current_user.id %>
             <li><span><%= fa_icon "pencil" %></span>
-              <%= link_to 'Edit', "/designs/#{design.id}/edit", method: :get %>
+              <%= link_to '編集', "/designs/#{design.id}/edit", method: :get %>
             </li>
             <li><span><%= fa_icon "trash" %></span>
-              <%= link_to 'Delete', "/designs/#{design.id}", method: :delete %>
+              <%= link_to '削除', "/designs/#{design.id}", method: :delete %>
             </li>
     <% end %>
             <li id="pin">
-            <a data-pin-do="buttonPin" data-pin-tall="true" data-pin-save="true" href="https://www.pinterest.com/pin/create/button/?url=https://newbies-room.herokuapp.com/&media=&description="></a>
+            <a data-pin-do="buttonBookmark" data-pin-tall="true" data-pin-save="true" href="https://www.pinterest.com/pin/create/button/"></a>
             </li>
       </ul>
   </div>
