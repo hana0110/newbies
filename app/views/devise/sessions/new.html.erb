@@ -1,18 +1,18 @@
 <div class="contents">
-<div class="container form">
-  <div class="outer_form">
-  <div class="inner_form">
+<div class="container form" style="background-image: url(http://cdn.home-designing.com/wp-content/uploads/2016/02/quirky-scandinavian-design-ideas.jpg); background-size: cover;">
+  <div class="outer_form" style="background: rgba(250,250,250,0.7);">
+  <div class="inner_form" style="background: rgba(250,250,250,0.5);">
 <h2>Log in</h2>
 
 <div class="form_fields">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
     <%= f.email_field :email, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password %>
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
