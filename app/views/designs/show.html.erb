@@ -2,12 +2,6 @@
    <div class="content_post">
      <div class="content_info">
     <%= image_tag @design.images.first.image.url(:large) %>
-    <div class="tags clearfix">
-      <ul>
-          <li><%= render 'designs/tag_list', tag_list: @design.style_list %></li>
-          <li><%= render 'designs/tag_list', tag_list: @design.color_list %></li>
-      </ul>
-    </div>
     <span class="username clearfix">
       <span>By <%= @design.user.nickname %></span>
     </span>
@@ -44,6 +38,12 @@
       </div>
 
     <div class="details">
+      <div class="info clearfix">
+        <h5>Style |</h5>
+        <li><%= render 'designs/tag_list', tag_list: @design.style_list %></li>
+        <div class="info clearfix">
+        <h5>Colors |</h5>
+        <li><%= render 'designs/tag_list', tag_list: @design.color_list %></li>
       <div class="info clearfix">
         <h5>Key Items |</h5>
         <li><%= render 'designs/tag_list', tag_list: @design.item_list %></li>
